@@ -27,7 +27,7 @@ public class AlunoUniversitario extends Aluno {
 	
 	public void setCurso(Curso curso) {
 		if (curso == null) {
-			throw new IllegalArgumentException("Curso n„o poed ser nulo");
+			throw new IllegalArgumentException("Curso n√£o poed ser nulo");
 		}
 		this.curso = curso;
 	}
@@ -38,15 +38,15 @@ public class AlunoUniversitario extends Aluno {
 			throw new IllegalArgumentException();
 		}
 		if (getFormaIngresso() == 'E') {
-		return getNome() + " È aluno universit·rio do curso de "+ curso.getSigla() + "-" + curso.getNome() + ", ingressado por ENEM";
+		return getNome() + " √© aluno universit√°rio do curso de "+ curso.getSigla() + "-" + curso.getNome() + ", ingressado por ENEM";
 	} else if (getFormaIngresso() == 'V') {
-		return getNome() + " È aluno universit·rio do curso de "+ curso.getSigla() + "-" + curso.getNome() + ", ingressado por vestibular";
+		return getNome() + " √© aluno universit√°rio do curso de "+ curso.getSigla() + "-" + curso.getNome() + ", ingressado por vestibular";
 	} else if (getFormaIngresso() == 'S') {
-		return getNome() + " È aluno universit·rio do curso de "+ curso.getSigla() + "-" + curso.getNome() + ", ingressado por seletivo especial";
+		return getNome() + " √© aluno universit√°rio do curso de "+ curso.getSigla() + "-" + curso.getNome() + ", ingressado por seletivo especial";
 	} else if ( getFormaIngresso() == 'T') {
-		return getNome() + " È aluno universit·rio do curso de "+ curso.getSigla() + "-" + curso.getNome() + ", ingressado por transferÍncia externa";
+		return getNome() + " √© aluno universit√°rio do curso de "+ curso.getSigla() + "-" + curso.getNome() + ", ingressado por transfer√™ncia externa";
 	} else if (getFormaIngresso() == 'I') {
-		return getNome() + " È aluno universit·rio do curso de "+ curso.getSigla() + "-" + curso.getNome() + ", ingressado por transferÍncia interna";
+		return getNome() + " √© aluno universit√°rio do curso de "+ curso.getSigla() + "-" + curso.getNome() + ", ingressado por transfer√™ncia interna";
 	}
 		
 		
