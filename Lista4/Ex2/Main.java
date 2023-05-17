@@ -13,7 +13,7 @@ public class Main {
 		
 		alunos.add(aluno1);
 		
-		AlunoUniversitario aluno2 =  new AlunoUniversitario("pablo", LocalDate.of(2003, 01, 14), 'v', new Curso("BCC", "Computação"));
+		AlunoUniversitario aluno2 =  new AlunoUniversitario("pablo", LocalDate.of(2003, 01, 14), 'v', new Curso("BCC", "ComputaÃ§Ã£o"));
 		
 		alunos.add(aluno2);
 		
