@@ -19,7 +19,7 @@ public class AlunoEM extends Aluno {
 	}
 	@Override
 	public String mostra() {
-		return getNome() + " est· no " + getAno() +"o do ensino mÈdio e tem "+ getIdade() +" anos";
+		return getNome() + " est√° no " + getAno() +"o do ensino m√©dio e tem "+ getIdade() +" anos";
 	}
 	
 	
