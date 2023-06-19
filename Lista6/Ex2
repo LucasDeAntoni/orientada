@@ -1,0 +1,15 @@
++----+--------------------+-----------------------+---------------+---------------------+--------------------+------------------+-----------------------------+
+|    | Estrutura de Dados | Duplicação de Objetos | Valores Nulos | Métodos de Inserção | Métodos de Remoção | Métodos de Busca | Interfaces JCF Implementadas |
++----+--------------------+-----------------------+---------------+---------------------+--------------------+------------------+-----------------------------+
+| i. | ArrayDeque         | Sim                   | Não           | Início, Ao Final    | Início, Ao Final   | Por Posição       | Deque                       |
+| ii. | ArrayList          | Sim                   | Sim           | Qualquer Posição    | Qualquer Posição  | Por Posição       | List                        |
+| iii. | HashSet            | Não                   | Não           | Qualquer Posição    | Qualquer Posição  | Por Chave         | Set                         |
+| iv. | LinkedHashSet      | Não                   | Não           | Ao Final            | Ao Final          | Por Chave         | Set                         |
+| v.  | LinkedList         | Sim                   | Sim           | Qualquer Posição    | Qualquer Posição  | Por Posição       | List, Deque                  |
+| vi. | PriorityQueue     | Não                   | Não           | Ao Final            | Não               | Não               | Queue                       |
+| vii. | TreeSet            | Não                   | Não           | Não aplicável       | Não aplicável      | Por Chave         | Set, SortedSet               |
+| viii.| Vector             | Sim                   | Sim           | Qualquer Posição    | Qualquer Posição  | Por Posição       | List                        |
+| ix.  | HashMap            | Sim                   | Sim           | Não aplicável       | Não aplicável      | Por Chave         | Map                         |
+| x.   | LinkedHashMap      | Sim                   | Sim           | Qualquer Posição    | Qualquer Posição  | Por Chave         | Map                         |
+| xi. | TreeMap            | Não                   | Sim           | Não aplicável       | Não aplicável      | Por Chave         | Map, SortedMap              |
++----+--------------------+-----------------------+---------------+---------------------+--------------------+------------------+-----------------------------+
