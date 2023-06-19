@@ -1,0 +1,141 @@
+
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Stream;
+
+public class ASCII {
+	private String c;
+	private String numero;
+
+	public ASCII(String c, String numero) {
+		super();
+		this.c = c;
+		this.numero = numero;
+	}
+
+	public String getNumero() {
+		return numero;
+	}
+
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+
+	public String getC() {
+		return c;
+	}
+
+	public void setC(String c) {
+		this.c = c;
+	}
+
+	public static void main(String[] args) {
+
+		escrever();
+		lerA();
+		lerB();
+		calcular();
+		escreverFinal();
+
+// System.out.println(i);
+	}
+
+	public static void escrever() {
+		System.out.println("aqui1");
+		Scanner tec = new Scanner(System.in);
+		String ch = tec.next();
+		String n = tec.next();
+		System.out.println("aqui");
+		Path arquivo = Paths.get("MeuTexto.txt");
+		try {
+// Se o arquivo não existe, ele cria. Se existe, apaga o conteúdo e insere o novo.
+			Files.write(arquivo, "".getBytes(StandardCharsets.UTF_8));
+
+// Se o arquivo existir, adiciona um novo conteúdo
+			Files.write(arquivo, ch.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE,
+					StandardOpenOption.APPEND);
+
+			Files.write(arquivo, "\n".getBytes(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+			Files.write(arquivo, n.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE,
+					StandardOpenOption.APPEND);
+
+		} catch (IOException e) {
+			System.out.println("Ocorreu um erro ao escrever no arquivo: " + e);
+		}
+		tec.close();
+	}
+
+	public static char lerA() {
+		Path arquivo = Paths.get("MeuTexto.txt");
+		char a = ' ';
+
+		try {
+			List<String> linhas = Files.readAllLines(arquivo);
+
+			for (String obj : linhas) {
+				a = linhas.get(0).charAt(0);
+			}
+			linhas.forEach(obj -> System.out.println("LEITURA NIO: " + obj));
+			System.out.println(a);
+
+		} catch (Exception e) {
+
+		}
+		return a;
+	}
+
+	public static String lerB() {
+		Path arquivo = Paths.get("MeuTexto.txt");
+		String b = "";
+
+		try {
+			List<String> linhas = Files.readAllLines(arquivo);
+
+			for (String obj : linhas) {
+				b = linhas.get(1);
+			}
+			// linhas.forEach(obj -> System.out.println("LEITURA NIO: " + obj));
+			System.out.println(b);
+
+		} catch (Exception e) {
+
+		}
+		return b;
+	}
+
+	public static char calcular() {
+		int a = lerA();
+		int b = Integer.parseInt(lerB());
+		int c = a + b;
+		
+		char str = (char)c;
+		System.out.println(c);
+		System.out.println(a);
+		System.out.println(lerB());
+		
+		return str;
+	}
+
+	public static void escreverFinal() {
+		Path arquivo = Paths.get("MeuTextoSaida");
+		
+		
+		String str = Character.toString(calcular());
+
+		try {
+			Files.write(arquivo, str.getBytes(StandardCharsets.UTF_8));
+
+//Files.write(arquivo, )
+		} catch (Exception e) {
+// TODO: handle exception
+		}
+
+	}
+}
